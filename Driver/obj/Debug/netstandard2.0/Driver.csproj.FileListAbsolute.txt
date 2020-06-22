@@ -1,0 +1,15 @@
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\Driver\bin\Debug\netstandard2.0\ControlCAN.dll
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\Driver\bin\Debug\netstandard2.0\kerneldlls\CANDTU_NET.dll
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\Driver\bin\Debug\netstandard2.0\kerneldlls\CANETE.dll
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\Driver\bin\Debug\netstandard2.0\kerneldlls\CANET_TCP.dll
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\Driver\bin\Debug\netstandard2.0\kerneldlls\CANWIFI_TCP.dll
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\Driver\bin\Debug\netstandard2.0\kerneldlls\CANWIFI_UDP.dll
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\Driver\bin\Debug\netstandard2.0\kerneldlls\kerneldll.ini
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\Driver\bin\Debug\netstandard2.0\Driver.deps.json
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\Driver\bin\Debug\netstandard2.0\Driver.dll
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\Driver\bin\Debug\netstandard2.0\Driver.pdb
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\Driver\obj\Debug\netstandard2.0\Driver.AssemblyInfoInputs.cache
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\Driver\obj\Debug\netstandard2.0\Driver.AssemblyInfo.cs
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\Driver\obj\Debug\netstandard2.0\Driver.dll
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\Driver\obj\Debug\netstandard2.0\Driver.pdb
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\Driver\obj\Debug\netstandard2.0\Driver.csprojAssemblyReference.cache

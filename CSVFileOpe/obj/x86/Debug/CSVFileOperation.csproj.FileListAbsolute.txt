@@ -1,0 +1,5 @@
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\CSVFileOpe\bin\x86\Debug\CSVFileOpe.dll
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\CSVFileOpe\bin\x86\Debug\CSVFileOpe.pdb
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\CSVFileOpe\obj\x86\Debug\CSVFileOperation.csprojAssemblyReference.cache
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\CSVFileOpe\obj\x86\Debug\CSVFileOpe.dll
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\CSVFileOpe\obj\x86\Debug\CSVFileOpe.pdb

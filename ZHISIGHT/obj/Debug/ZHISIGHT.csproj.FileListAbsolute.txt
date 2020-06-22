@@ -1,0 +1,71 @@
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\obj\Debug\ZHISIGHT.csprojAssemblyReference.cache
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\obj\Debug\ZHISIGHT.Properties.Resources.resources
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\obj\Debug\ZHISIGHT.csproj.GenerateResource.cache
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\bin\Debug\kerneldlls\CAN232.dll
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\bin\Debug\kerneldlls\kerneldll.ini
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\bin\Debug\kerneldlls\CANDTU_NET.dll
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\bin\Debug\kerneldlls\CANET_TCP.dll
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\bin\Debug\kerneldlls\CANETE.dll
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\bin\Debug\kerneldlls\CANWIFI_TCP.dll
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\bin\Debug\kerneldlls\CANWIFI_UDP.dll
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\bin\Debug\kerneldlls\gisadll.dll
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\bin\Debug\kerneldlls\gpcidll.dll
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\bin\Debug\kerneldlls\isa5420.dll
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\bin\Debug\kerneldlls\PC104C2.dll
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\bin\Debug\kerneldlls\PC104CAN.dll
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\bin\Debug\kerneldlls\PCI5121.dll
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\bin\Debug\kerneldlls\pci9810b.dll
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\bin\Debug\kerneldlls\pci9820b.dll
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\bin\Debug\kerneldlls\pci9820i.dll
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\bin\Debug\kerneldlls\pci9840b.dll
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\bin\Debug\kerneldlls\pcie9140_x64.dll
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\bin\Debug\kerneldlls\pec9920.dll
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\bin\Debug\kerneldlls\usbcan.dll
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\bin\Debug\kerneldlls\USBCAN_8E_U_x64.dll
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\bin\Debug\ControlCAN.dll
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\bin\Debug\LibDBCManager.dll
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\bin\Debug\winmm.dll
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\bin\Debug\ZHISIGHT.exe.config
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\bin\Debug\ZHISIGHT.exe
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\bin\Debug\ZHISIGHT.pdb
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\bin\Debug\CANDriver.dll
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\bin\Debug\CANSignalL.dll
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\bin\Debug\CSVFileOpe.dll
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\bin\Debug\CANDriver.pdb
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\bin\Debug\CANSignalL.pdb
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\bin\Debug\CSVFileOpe.pdb
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\obj\Debug\ZHISIGHT.csproj.CopyComplete
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\obj\Debug\ZHISIGHT.exe
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\obj\Debug\ZHISIGHT.pdb
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\obj\Debug\ZHISIGHT.CommunicationForm.resources
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\obj\Debug\ZHISIGHT.ConfigFileForm.resources
+C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\ZHISIGHT\obj\Debug\ZHISIGHT.Form1.resources
+C:\Users\ASUS\Desktop\ZHISight\DVHostV0003.1毫秒定时器\ZHISIGHT\obj\Debug\ZHISIGHT.exe
+C:\Users\ASUS\Desktop\ZHISight\DVHostV0003.1毫秒定时器\ZHISIGHT\obj\Debug\ZHISIGHT.pdb
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\ZHISIGHT\bin\Debug\ControlCAN.dll
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\ZHISIGHT\bin\Debug\kerneldlls\CANDTU_NET.dll
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\ZHISIGHT\bin\Debug\kerneldlls\CANETE.dll
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\ZHISIGHT\bin\Debug\kerneldlls\CANET_TCP.dll
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\ZHISIGHT\bin\Debug\kerneldlls\CANWIFI_TCP.dll
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\ZHISIGHT\bin\Debug\kerneldlls\CANWIFI_UDP.dll
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\ZHISIGHT\bin\Debug\kerneldlls\kerneldll.ini
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\ZHISIGHT\bin\Debug\LibDBCManager.dll
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\ZHISIGHT\bin\Debug\winmm.dll
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\ZHISIGHT\bin\Debug\ZHISIGHT.exe.config
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\ZHISIGHT\bin\Debug\ZHISIGHT.exe
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\ZHISIGHT\bin\Debug\ZHISIGHT.pdb
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\ZHISIGHT\bin\Debug\CSVFileOpe.dll
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\ZHISIGHT\bin\Debug\Driver.dll
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\ZHISIGHT\bin\Debug\Signal.dll
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\ZHISIGHT\bin\Debug\CSVFileOpe.pdb
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\ZHISIGHT\bin\Debug\Driver.pdb
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\ZHISIGHT\bin\Debug\Signal.pdb
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\ZHISIGHT\obj\Debug\ZHISIGHT.csprojAssemblyReference.cache
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\ZHISIGHT\obj\Debug\ZHISIGHT.CommunicationForm.resources
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\ZHISIGHT\obj\Debug\ZHISIGHT.ConfigFileForm.resources
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\ZHISIGHT\obj\Debug\ZHISIGHT.Form1.resources
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\ZHISIGHT\obj\Debug\ZHISIGHT.Properties.Resources.resources
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\ZHISIGHT\obj\Debug\ZHISIGHT.csproj.GenerateResource.cache
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\ZHISIGHT\obj\Debug\ZHISIGHT.csproj.CopyComplete
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\ZHISIGHT\obj\Debug\ZHISIGHT.exe
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\ZHISIGHT\obj\Debug\ZHISIGHT.pdb
