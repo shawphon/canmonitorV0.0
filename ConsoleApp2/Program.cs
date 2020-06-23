@@ -1,7 +1,9 @@
 ﻿using System;
-using ZLGCANDriver;
+
 using System.Threading;
 using System.Runtime.InteropServices;
+using CANSignalLayer;
+using CANDriverLayer;
 using CSVFileOperationPart;
 
 namespace ConsoleApp1
@@ -10,38 +12,37 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            ZCAN_CHANNEL_INIT_CONFIG initConfig = new ZCAN_CHANNEL_INIT_CONFIG();
-            initConfig.can_type = 0;
-            ZCAN zCAN = new ZCAN();
-            zCAN.acc_code = Convert.ToUInt32("0x" + "00000000", 16);
-            zCAN.acc_mask = Convert.ToUInt32("0x" + "FFFFFFFF", 16);
-            zCAN.mode = 0;
-            zCAN.timing0 = 0x01;
-            zCAN.timing1 = 0x1C;
+            FileInfo fileInfo = new FileInfo
+            {
+                strFilePath = "C:\\Users\\ASUS\\Desktop\\CANprotocol.dbc".PadRight(261, '\0').ToCharArray(),//这部分会出错！！！！
+                type = 1
+            };
 
-
-            ZlgCANDriver cANDriver = new ZlgCANDriver(21, 0, 0, initConfig);
-
-            cANDriver.Open();
-            cANDriver.Init();
-            cANDriver.Start();
-            ZCAN_Transmit_Data obj = new ZCAN_Transmit_Data();
-            can_frame frame = new can_frame();
-            obj.transmit_type = 0; //0=正常发送，1=单次发送，2=自发自收，3=单次自发自收
-            frame.can_id = 8;
-            frame.can_dlc = 8;
-            frame.data = System.Text.Encoding.Default.GetBytes("12331233");
-            obj.frame = frame;
-
+            ICANDriver intfCANDriver = new CANDriver(21, 0, 0);
+            intfCANDriver.Open();
+            intfCANDriver.Init();
+            intfCANDriver.Start();
+            VCI_CAN_OBJ vCI_CAN_OBJ = new VCI_CAN_OBJ();
+            vCI_CAN_OBJ.ID = 8;
+            vCI_CAN_OBJ.RemoteFlag = 0;
+            vCI_CAN_OBJ.ExternFlag = 0;
+            vCI_CAN_OBJ.Data = System.Text.Encoding.Default.GetBytes("11112222");
+            vCI_CAN_OBJ.DataLen = 8;
+            vCI_CAN_OBJ.SendType = 0;
+            Thread.Sleep(1000);
+            UInt32 res = 0;
+            VCI_CAN_OBJ[] recFrame = new VCI_CAN_OBJ[50];
             while (true)
             {
-                cANDriver.Transmit(obj, 1);
+                res = intfCANDriver.Receive(ref recFrame);   //先接收到帧     
+                if (res!=0)
+                {
+                    Console.WriteLine(res);
+
+                }
                 Thread.Sleep(100);
+
             }
-
-            Console.WriteLine(cANDriver.Transmit(obj, 1));
-            Console.ReadKey();
-
             //do
             //{
             //    Console.WriteLine("信号设值，请输入信号ID");
@@ -72,6 +73,35 @@ namespace ConsoleApp1
             
         }
 
+
+        /// <summary>
+        /// 开启获取信号值
+        /// </summary>
+        /// <param name="intfcanSignal"></param>
+        private static void StartGetSignalValue(object intfcanSignal)
+        {
+            try
+            {
+                ICANSignal intfCANSignal = intfcanSignal as ICANSignal;
+                while (true)
+                {
+                    Console.WriteLine("请输入想要查询的信号所属消息的ID值：");
+                    uint messageId = Convert.ToUInt32(Console.ReadLine());
+                    Console.WriteLine("请输入想要查询的信号名：");
+                    string signalName = Console.ReadLine();
+
+                    double value = intfCANSignal.GetSignalByNameToApp(messageId, System.Text.Encoding.Default.GetBytes(signalName));
+                    Console.WriteLine(Convert.ToString(value));
+
+                    Thread.Sleep(100);
+                }
+            }
+            catch (Exception)
+            {
+                return;     //添加日志，报错信息
+            }
+
+        }
 
     }
 }

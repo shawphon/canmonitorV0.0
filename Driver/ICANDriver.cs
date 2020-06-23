@@ -68,6 +68,6 @@ namespace CANDriverLayer
         /// <param name="len"></param>
         /// <returns></returns>
         #endregion
-        UInt32 Transmit(VCI_CAN_OBJ pTxFrameBufferFromCANSignal, UInt32 len);
+        UInt32 Transmit(ref VCI_CAN_OBJ pTxFrameBufferFromCANSignal, UInt32 len);
     }
 }

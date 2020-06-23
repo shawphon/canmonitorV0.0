@@ -186,11 +186,11 @@
   "project": {
     "version": "1.0.1",
     "restore": {
-      "projectUniqueName": "Z:\\JOB\\CAN HOST COMPUTER\\DVHostV0003.1\\Driver\\Driver.csproj",
+      "projectUniqueName": "Z:\\JOB\\CAN HOST COMPUTER\\CANHOSTV1.0\\Driver\\Driver.csproj",
       "projectName": "Driver",
-      "projectPath": "Z:\\JOB\\CAN HOST COMPUTER\\DVHostV0003.1\\Driver\\Driver.csproj",
+      "projectPath": "Z:\\JOB\\CAN HOST COMPUTER\\CANHOSTV1.0\\Driver\\Driver.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "Z:\\JOB\\CAN HOST COMPUTER\\DVHostV0003.1\\Driver\\obj\\",
+      "outputPath": "Z:\\JOB\\CAN HOST COMPUTER\\CANHOSTV1.0\\Driver\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

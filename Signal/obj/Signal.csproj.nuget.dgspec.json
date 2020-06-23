@@ -1,28 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "Z:\\JOB\\CAN HOST COMPUTER\\DVHostV0003.1\\Signal\\Signal.csproj": {}
+    "Z:\\JOB\\CAN HOST COMPUTER\\CANHOSTV1.0\\Signal\\Signal.csproj": {}
   },
   "projects": {
-    "Z:\\JOB\\CAN HOST COMPUTER\\DVHostV0003.1\\CSVFileOpe\\CSVFileOperation.csproj": {
+    "Z:\\JOB\\CAN HOST COMPUTER\\CANHOSTV1.0\\CSVFileOpe\\CSVFileOperation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Z:\\JOB\\CAN HOST COMPUTER\\DVHostV0003.1\\CSVFileOpe\\CSVFileOperation.csproj",
+        "projectUniqueName": "Z:\\JOB\\CAN HOST COMPUTER\\CANHOSTV1.0\\CSVFileOpe\\CSVFileOperation.csproj",
         "projectName": "CSVFileOperation",
-        "projectPath": "Z:\\JOB\\CAN HOST COMPUTER\\DVHostV0003.1\\CSVFileOpe\\CSVFileOperation.csproj"
+        "projectPath": "Z:\\JOB\\CAN HOST COMPUTER\\CANHOSTV1.0\\CSVFileOpe\\CSVFileOperation.csproj"
       },
       "frameworks": {
         "net472": {}
       }
     },
-    "Z:\\JOB\\CAN HOST COMPUTER\\DVHostV0003.1\\Driver\\Driver.csproj": {
+    "Z:\\JOB\\CAN HOST COMPUTER\\CANHOSTV1.0\\Driver\\Driver.csproj": {
       "version": "1.0.1",
       "restore": {
-        "projectUniqueName": "Z:\\JOB\\CAN HOST COMPUTER\\DVHostV0003.1\\Driver\\Driver.csproj",
+        "projectUniqueName": "Z:\\JOB\\CAN HOST COMPUTER\\CANHOSTV1.0\\Driver\\Driver.csproj",
         "projectName": "Driver",
-        "projectPath": "Z:\\JOB\\CAN HOST COMPUTER\\DVHostV0003.1\\Driver\\Driver.csproj",
+        "projectPath": "Z:\\JOB\\CAN HOST COMPUTER\\CANHOSTV1.0\\Driver\\Driver.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "Z:\\JOB\\CAN HOST COMPUTER\\DVHostV0003.1\\Driver\\obj\\",
+        "outputPath": "Z:\\JOB\\CAN HOST COMPUTER\\CANHOSTV1.0\\Driver\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -73,14 +73,14 @@
         }
       }
     },
-    "Z:\\JOB\\CAN HOST COMPUTER\\DVHostV0003.1\\Signal\\Signal.csproj": {
+    "Z:\\JOB\\CAN HOST COMPUTER\\CANHOSTV1.0\\Signal\\Signal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Z:\\JOB\\CAN HOST COMPUTER\\DVHostV0003.1\\Signal\\Signal.csproj",
+        "projectUniqueName": "Z:\\JOB\\CAN HOST COMPUTER\\CANHOSTV1.0\\Signal\\Signal.csproj",
         "projectName": "Signal",
-        "projectPath": "Z:\\JOB\\CAN HOST COMPUTER\\DVHostV0003.1\\Signal\\Signal.csproj",
+        "projectPath": "Z:\\JOB\\CAN HOST COMPUTER\\CANHOSTV1.0\\Signal\\Signal.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "Z:\\JOB\\CAN HOST COMPUTER\\DVHostV0003.1\\Signal\\obj\\",
+        "outputPath": "Z:\\JOB\\CAN HOST COMPUTER\\CANHOSTV1.0\\Signal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -99,11 +99,11 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "Z:\\JOB\\CAN HOST COMPUTER\\DVHostV0003.1\\CSVFileOpe\\CSVFileOperation.csproj": {
-                "projectPath": "Z:\\JOB\\CAN HOST COMPUTER\\DVHostV0003.1\\CSVFileOpe\\CSVFileOperation.csproj"
+              "Z:\\JOB\\CAN HOST COMPUTER\\CANHOSTV1.0\\CSVFileOpe\\CSVFileOperation.csproj": {
+                "projectPath": "Z:\\JOB\\CAN HOST COMPUTER\\CANHOSTV1.0\\CSVFileOpe\\CSVFileOperation.csproj"
               },
-              "Z:\\JOB\\CAN HOST COMPUTER\\DVHostV0003.1\\Driver\\Driver.csproj": {
-                "projectPath": "Z:\\JOB\\CAN HOST COMPUTER\\DVHostV0003.1\\Driver\\Driver.csproj"
+              "Z:\\JOB\\CAN HOST COMPUTER\\CANHOSTV1.0\\Driver\\Driver.csproj": {
+                "projectPath": "Z:\\JOB\\CAN HOST COMPUTER\\CANHOSTV1.0\\Driver\\Driver.csproj"
               }
             }
           }

@@ -14,7 +14,7 @@
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -60,10 +60,6 @@
     <ProjectReference Include="..\Signal\Signal.csproj">
       <Project>{FF51216F-BC50-405C-8B1B-A03C9BADD30D}</Project>
       <Name>Signal</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ZLGCANDriver\ZLGCANDriver.csproj">
-      <Project>{9fd2411f-75fa-40f8-a047-c693ef2c9407}</Project>
-      <Name>ZLGCANDriver</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

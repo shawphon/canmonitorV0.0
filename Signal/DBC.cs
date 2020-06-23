@@ -40,7 +40,7 @@ namespace CANSignalLayer
         public static extern bool DBC_Analyse(DBCHandle hDBC, IntPtr pRecFrame, IntPtr pMessage);
 
         [DllImport("LibDBCManager.dll")]
-        public static extern void DBC_OnReceive(DBCHandle hDBC, ref VCI_CAN_OBJ pObj);
+        public static extern void DBC_OnReceive(DBCHandle hDBC, IntPtr ptObj);
 
         [DllImport("LibDBCManager.dll")]
         public static extern void DBC_SetSender(DBCHandle hDBC, OnSend sender, IntPtr pContext);
@@ -133,10 +133,11 @@ namespace CANSignalLayer
         public Double nMax;
         public Double nValue;
         public UInt64 nRawValue;
-        public Byte is_signed;
-        public Byte is_motorola;
+        public byte is_signed;
+        public byte is_motorola;
         public Byte multiplexer_type;
-        public Byte multiplexer_value;
+        public Byte val_type;
+        public UInt32 multiplexer_value;
 
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 11)]
         public Byte[] unit;
@@ -162,8 +163,9 @@ namespace CANSignalLayer
     {
         public UInt32 nSignalCount;
         public UInt32 nID;
-        public Byte nExtend;
         public UInt32 nSize;
+        public double cycleTime;
+        public byte nExyended;
 
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 128)]
         public DBCSignal[] vSignals;
@@ -183,7 +185,7 @@ namespace CANSignalLayer
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 261)]
         public Char[] strFilePath;
 
-        public Byte type;
+        public Byte type; //0 J1939
     }
     public struct Ctx
     {

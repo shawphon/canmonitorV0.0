@@ -12,3 +12,9 @@ Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\CSVFileOpe\bin\Debug\CSVFileOpe.dll
 Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\CSVFileOpe\bin\Debug\CSVFileOpe.pdb
 Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\CSVFileOpe\obj\Debug\CSVFileOpe.dll
 Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\CSVFileOpe\obj\Debug\CSVFileOpe.pdb
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.1\CSVFileOpe\obj\Debug\CSVFileOperation.csprojAssemblyReference.cache
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.2\CSVFileOpe\bin\Debug\CSVFileOpe.dll
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.2\CSVFileOpe\bin\Debug\CSVFileOpe.pdb
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.2\CSVFileOpe\obj\Debug\CSVFileOperation.csprojAssemblyReference.cache
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.2\CSVFileOpe\obj\Debug\CSVFileOpe.dll
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.2\CSVFileOpe\obj\Debug\CSVFileOpe.pdb

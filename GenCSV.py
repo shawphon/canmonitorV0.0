@@ -8,6 +8,7 @@ Kep on mvi
 
 import os
 import csv
+import time
 import logging
 
 def Search_Str(lines, search_str, condi_code=''):
@@ -69,8 +70,11 @@ def OutIdandTime(dbclines):
 	
 	return idandTimeDic
 	
-def Create_csv(listInfo, mode):
-	path = "C:\\Users\\shawphon\\Desktop\\Config.csv"    
+def Create_csv(listInfo, mode, dirPath):
+	"""创建CSV文件"""
+	
+	path = dirPath + "\\" + "Config.csv"
+	#print(path)
 	with open(path, mode, newline='') as f:
 		csv_write = csv.writer(f)
 		csv_head = [listInfo[0], listInfo[1], listInfo[2], listInfo[3]]
@@ -86,86 +90,130 @@ def Read_File(file_name):
 	return lines
 	
 
-def CreatCSVFile(fileName):
+def CreatCSVFile(dirPath, fileName):
 	"""根据DBC文件生成相应的CSV文件"""
 		
-	
+	fileName = dirPath + "\\" + fileName
+	#print(fileName)
 	listColumn = ["MessageID", "SignalName", "Period", "GroupName"]
 	listInfo = []
-	Create_csv(listColumn, 'w')		#添加列表列名
+	Create_csv(listColumn, 'w', dirPath)		#添加列表列名
 	lines = Read_File(fileName)
 	
 	dicTime = {}
 	dicTime = OutIdandTime(lines)#消息名及其周期组成字典
+	
+	print("Please Input VCU Name : ")
+	VCU = input().strip()
+	print("Please Input PCU Name : ")
+	PCU = input().strip()
 	
 	lineSearched = Search_Str(lines, "BO_")
 	for i in range(len(lineSearched)-1):
 		firstBO = lines.index(lineSearched[i])
 		secondBO = lines.index(lineSearched[i+1])
 		
-		if lines[firstBO].strip().split()[-1] == "ISGCM":			
+		if lines[firstBO].strip().split()[-1] == PCU:			
 			messageID = lines[firstBO].strip().split()[1]
+			if (int)(messageID)>2147483648:
+				ID = (int)(messageID) - 2147483648
+								
 			period = dicTime[messageID]
 			for j in range(firstBO, secondBO):
 				if "SG_" in lines[j]:
-					listInfo.append(messageID)#添加messageID
-					listInfo.append(lines[j].strip().split()[1])#添加SignalName
-					listInfo.append(period)#添加Period
+					listInfo.append(str(ID))#为csv文件添加messageID
+					listInfo.append(lines[j].strip().split()[1])#为csv文件添加SignalName
+					listInfo.append(period)#为csv文件添加Period
 					listInfo.append("Received")
-					Create_csv(listInfo, 'a')
+					Create_csv(listInfo, 'a', dirPath)
 					listInfo.clear()
 				
-		if lines[firstBO].strip().split()[-1] == "HCU":
+		if lines[firstBO].strip().split()[-1] == VCU:
 			messageID = lines[firstBO].strip().split()[1]
+			if (int)(messageID)>2147483648:
+				ID = (int)(messageID) - 2147483648
+				
 			period = dicTime[messageID]
 			for j in range(firstBO, secondBO):
 				flag = 0
 				for k in range(firstBO, secondBO):
-					if "ISGCM" in lines[k]:
+					if PCU in lines[k]:
 						flag = 1
 						break				
 				if "SG_" in lines[j] and flag == 1:
-					listInfo.append(messageID)#添加messageID
-					listInfo.append(lines[j].strip().split()[1])#添加SignalName
-					listInfo.append(period)#添加Period
+					listInfo.append(str(ID))#为csv文件添加messageID
+					listInfo.append(lines[j].strip().split()[1])#为csv文件添加SignalName
+					listInfo.append(period)#为csv文件添加Period
 					listInfo.append("Transmitted")
-					Create_csv(listInfo, 'a')
+					Create_csv(listInfo, 'a', dirPath)
 					listInfo.clear()
 					
 	firstBO = lines.index(lineSearched[i+1])
 	secondBO = len(lines)-1
-	if lines[firstBO].strip().split()[-1] == "ISGCM":		
+	if lines[firstBO].strip().split()[-1] == PCU:		
 		messageID = lines[firstBO].strip().split()[1]
+		if (int)(messageID)>2147483648:
+			ID = (int)(messageID) - 2147483648
+			
 		period = dicTime[messageID]
 		for j in range(firstBO, secondBO):
 			if "SG" in lines[j].strip().split('_')[0]:
-				listInfo.append(messageID)#添加messageID
-				listInfo.append(lines[j].strip().split()[1])#添加SignalName
-				listInfo.append(period)#添加Period
+				listInfo.append(str(ID))#为csv文件添加messageID
+				listInfo.append(lines[j].strip().split()[1])#为csv文件添加SignalName
+				listInfo.append(period)#为csv文件添加Period
 				listInfo.append("Received")
-				Create_csv(listInfo, 'a')
+				Create_csv(listInfo, 'a', dirPath)
 				listInfo.clear()
 				
-	if lines[firstBO].strip().split()[-1] == "HCU":
+	if lines[firstBO].strip().split()[-1] == VCU:
 		messageID = lines[firstBO].strip().split()[1]
+		if (int)(messageID)>2147483648:
+			ID = (int)(messageID) - 2147483648
+		
 		period = dicTime[messageID]
 		for j in range(firstBO, secondBO):
 			flag = 0
 			for k in range(firstBO, secondBO):
-				if "ISGCM" in lines[k]:
+				if PCU in lines[k]:
 					flag = 1
 					break				
-			if "SG" in lines[j] and flag == 1:
-				listInfo.append(messageID)#添加messageID
-				listInfo.append(lines[j].strip().split()[1])#添加SignalName
-				listInfo.append(period)#添加Period
+			if "SG" in lines[j].strip().split('_')[0] and flag == 1:
+				listInfo.append(str(ID))#为csv文件添加messageID
+				listInfo.append(lines[j].strip().split()[1])#为csv文件添加SignalName
+				listInfo.append(period)#为csv文件添加Period
 				listInfo.append("Transmitted")
-				Create_csv(listInfo, 'a')
+				Create_csv(listInfo, 'a', dirPath)
 				listInfo.clear()
 if __name__=='__main__':
 	"""主函数部分"""
-	print(os.path.abspath("."))
-	CreatCSVFile(os.path.abspath(".") + "\\YC_NewEnergy_DMCM&FISGM_Matrix_V1.0_20190613.dbc")
+	
+	dirPath = os.path.abspath(".")
+	
+	print("Current path : " + os.path.abspath('.'))	#寻找当前路径下的DBC文件
+	L=[]  
+	for root, dirs, files in os.walk(dirPath): 
+		for f in files: 
+			if os.path.splitext(f)[1] == '.dbc': 
+				L.append(f)
+	
+	if L:
+		for i in range(0, len(L)):
+			print(str(i) + " : " + L[i])
+	else:
+		print("there is no DBC files in current path.")
+		time.sleep(5)
+		exit()
+			
+	print("Please choose the right DBC file, input the relative number : ")
+	i = int(input())
+	print("Selected DBC file name : " + L[i])
+	
+	CreatCSVFile(dirPath, L[i])
+	
+	print("Please Wait...")
+	time.sleep(1)	
+	print("Config.csv File is done, file exists in " + dirPath)
+	time.sleep(5)
 		
 
 

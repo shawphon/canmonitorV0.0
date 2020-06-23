@@ -60,7 +60,7 @@
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.uSBCANIIToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(83, 26);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(83, 24);
             this.toolStripMenuItem1.Text = "选择设备";
             // 
             // uSBCANIIToolStripMenuItem
@@ -73,14 +73,14 @@
             // 加载DBCToolStripMenuItem
             // 
             this.加载DBCToolStripMenuItem.Name = "加载DBCToolStripMenuItem";
-            this.加载DBCToolStripMenuItem.Size = new System.Drawing.Size(83, 26);
+            this.加载DBCToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
             this.加载DBCToolStripMenuItem.Text = "加载DBC";
             this.加载DBCToolStripMenuItem.Click += new System.EventHandler(this.加载DBCToolStripMenuItem_Click);
             // 
             // ConToolStripMenuItem
             // 
             this.ConToolStripMenuItem.Name = "ConToolStripMenuItem";
-            this.ConToolStripMenuItem.Size = new System.Drawing.Size(83, 26);
+            this.ConToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
             this.ConToolStripMenuItem.Text = "添加通道";
             this.ConToolStripMenuItem.Click += new System.EventHandler(this.AddChannelToolStripMenuItem_Click);
             // 

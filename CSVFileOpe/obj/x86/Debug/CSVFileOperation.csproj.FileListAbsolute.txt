@@ -3,3 +3,8 @@ C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\CSVFileOpe\bin\x86\Debug\CSVF
 C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\CSVFileOpe\obj\x86\Debug\CSVFileOperation.csprojAssemblyReference.cache
 C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\CSVFileOpe\obj\x86\Debug\CSVFileOpe.dll
 C:\Users\ASUS\Desktop\DVHostV0003.1毫秒定时器\CSVFileOpe\obj\x86\Debug\CSVFileOpe.pdb
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.2\CSVFileOpe\bin\x86\Debug\CSVFileOpe.dll
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.2\CSVFileOpe\bin\x86\Debug\CSVFileOpe.pdb
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.2\CSVFileOpe\obj\x86\Debug\CSVFileOperation.csprojAssemblyReference.cache
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.2\CSVFileOpe\obj\x86\Debug\CSVFileOpe.dll
+Z:\JOB\CAN HOST COMPUTER\DVHostV0003.2\CSVFileOpe\obj\x86\Debug\CSVFileOpe.pdb

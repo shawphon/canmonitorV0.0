@@ -37,7 +37,7 @@ namespace CANDriverLayer
         static extern UInt32 VCI_GetReference(UInt32 DeviceType, UInt32 DeviceInd, UInt32 CANInd, UInt32 RefType, ref byte pData);//不用USBCANII设备
 
         [DllImport("controlcan.dll", CharSet = CharSet.Unicode)]
-        static extern UInt32 VCI_SetReference(UInt32 DeviceType, UInt32 DeviceInd, UInt32 CANInd, UInt32 RefType, ref byte pData);//不用USBCANII设备
+        static extern UInt32 VCI_SetReference(UInt32 DeviceType, UInt32 DeviceInd, UInt32 CANInd, UInt32 RefType, IntPtr pData);//不用USBCANII设备
 
         [DllImport("controlcan.dll", CharSet = CharSet.Unicode)]
         static extern UInt32 VCI_GetReceiveNum(UInt32 DeviceType, UInt32 DeviceInd, UInt32 CANInd);//此函数从指定的设备 CAN 通道的接收缓冲区中读取数据,返回尚未被读取的帧数
@@ -68,6 +68,10 @@ namespace CANDriverLayer
         private VCI_INIT_CONFIG pInitConfig;
         private VCI_ERR_INFO pErrInfo;
 
+        private byte[] timing0 = new byte[9] { 0x00, 0x00, 0x00, 0x01, 0x03, 0x04, 0x09, 0x18, 0x31 };
+        private byte[] timing1 = new byte[9] { 0x14, 0x16, 0x1C, 0x1C, 0x1C, 0x1C, 0x1C, 0x1C, 0x1C };
+        private UInt32[] baudrate = new uint[9] {0x060003, 0x060004, 0x060007, 0x1C0008, 0x1C0011, 0x160023, 0x1C002C, 0x1600B3, 0x1C00E0};
+
         #region 封装字段
         public uint DevType { get => devType; set => devType = value; }
         public uint DevInd { get => devInd; set => devInd = value; }
@@ -87,7 +91,7 @@ namespace CANDriverLayer
         {
             pInitConfig.AccCode = 0;
             pInitConfig.Filter = 1;
-            pInitConfig.Timing0 = Convert.ToByte("0x00", 16);
+            pInitConfig.Timing0 = Convert.ToByte("0x01", 16);
             pInitConfig.Timing1 = Convert.ToByte("0x1C", 16);
             pInitConfig.Mode = 0;
         }
@@ -114,7 +118,7 @@ namespace CANDriverLayer
             this.canInd = CANInd;
             pInitConfig.AccCode = 0;
             pInitConfig.Filter = 1;
-            pInitConfig.Timing0 = Convert.ToByte("0x00", 16);
+            pInitConfig.Timing0 = Convert.ToByte("0x01", 16);
             pInitConfig.Timing1 = Convert.ToByte("0x1C", 16);
             pInitConfig.Mode = 0;
         }
@@ -147,7 +151,30 @@ namespace CANDriverLayer
             {
                 return 0;
             }
+
+            //如果是USBCAN-2e-U 
+            if (this.devType == 21)
+            {
+                int indexBaudrate = 0;
+                for (int i = 0; i < timing0.Length; i++)
+                {
+                    if (pInitConfig.Timing0 == timing0[i] & pInitConfig.Timing1 == timing1[i])
+                    {
+                        indexBaudrate = i;
+                        break;
+                    }
+                }
+                IntPtr ptBaudrate = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(UInt32)));
+                Marshal.WriteInt32(ptBaudrate, (int)baudrate[indexBaudrate]);
+                
+                
+                //则设置波特率
+                VCI_SetReference(this.devType, this.devInd, this.canInd, 0, ptBaudrate);
+            }
+
+            
             operationStatus = VCI_InitCAN(this.devType, this.devInd, this.canInd, ref this.pInitConfig) == 1 ? 1 : 0;
+            
             return operationStatus;
         }
 
@@ -203,14 +230,14 @@ namespace CANDriverLayer
                 return 0;
             }
             UInt32 res;
-            UInt32 max = 100;
+            UInt32 max = 50;
             IntPtr pt = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(VCI_CAN_OBJ)) * (int)max);
             res = VCI_GetReceiveNum(devType, devInd, canInd);
             if (res == 0)
             {
                 return 0;
             }
-            res = res > 100 ? 100 : res;
+            res = res > max ? max : res;
             res = VCI_Receive(devType, devInd, canInd, pt, res, 1);
             for (int i = 0; i < res; i++)
             {
@@ -228,14 +255,14 @@ namespace CANDriverLayer
         /// <param name="pTxFrameBufferFromCANSignal"></param>
         /// <param name="len"></param>
         /// <returns></returns>
-        public uint Transmit(VCI_CAN_OBJ pTxFrameBufferFromCANSignal, uint len)
+        public uint Transmit(ref VCI_CAN_OBJ pTxFrameBufferFromCANSignal, uint len)
         {
             if (IsDeviceOpen == 0)
             {
                 return 0;
             }
             pTxFrameBufferFromCANSignal.SendType = 0;                   //0正常发送， 1 单次发送，2自发自收，3单次自发自收
-            pTxFrameBufferFromCANSignal.ExternFlag = 1;                //
+            pTxFrameBufferFromCANSignal.ExternFlag = 1;                   //0正常发送， 1 单次发送，2自发自收，3单次自发自收
 
             IntPtr pt = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(VCI_CAN_OBJ)));
             Marshal.StructureToPtr(pTxFrameBufferFromCANSignal, pt, true);
@@ -304,15 +331,32 @@ namespace CANDriverLayer
         public UInt32 ID;
         public UInt32 TimeStamp;
         public byte TimeFlag;
-        public byte SendType;
-        public byte RemoteFlag;
-        public byte ExternFlag;
+        public byte SendType;//发送格式：0:正常发送 1:单次正常发送 2:自发自收 3.单次自发自收
+        public byte RemoteFlag;//帧格式：0：数据帧 1：远程帧
+        public byte ExternFlag;//帧类型：0：标准帧 1为扩展帧，29位ID
         public byte DataLen;
-
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 8)]
+        [MarshalAsAttribute(UnmanagedType.ByValArray, SizeConst = 8)]
         public byte[] Data;
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 8)]
+        [MarshalAsAttribute(UnmanagedType.ByValArray, SizeConst = 3)]
         public byte[] Reserved;
+    }
+
+    public struct VCI_CAN_OBJ1
+    {
+        public DBC_CAN_OBJ dbc_CAN_OBJ;
+        public UInt64 Timestamp;
+    }
+
+    public struct DBC_CAN_OBJ
+    {
+        public UInt32 ID;
+        public byte DataLen;
+        public byte pading;
+        public byte res0;
+        public byte res1;
+        [MarshalAsAttribute(UnmanagedType.ByValArray, SizeConst = 8)]
+        public byte[] Data;
+
     }
 
     /// <summary>
